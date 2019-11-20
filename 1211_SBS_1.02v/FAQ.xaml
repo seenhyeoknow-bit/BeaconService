@@ -1,0 +1,85 @@
+﻿<Window x:Class="_1211_SBS_1._02v.FAQ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FAQ" Height="600" Width="500" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" Text="FAQ" FontSize="25" FontWeight="Black"/>
+                    <Image Name="minibtn" MouseDown="minibtn_Click" Margin="5" Grid.Column="2" MouseEnter="minibtn_MouseEnter" MouseLeave="minibtn_MouseLeave"/>
+                    <Image Name="closebtn" MouseDown="closebtn_Click" Margin="5" Grid.Column="3" MouseEnter="closebtn_MouseEnter" MouseLeave="closebtn_MouseLeave"/>
+                </Grid>
+            </Border>
+            <Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Background="#FF9A9A9A">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="FAQ" HorizontalAlignment="Left" Margin="0,15" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+                            <Image Name="faqImage" HorizontalAlignment="Right" Grid.Column="0"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Q.  FAQ는 어떻게 써야하는거죠?" HorizontalAlignment="Center" Margin="0,15"/>
+                            <TextBlock Text="A.  FAQ는 이렇게 쓰면 안됩니다." HorizontalAlignment="Center" Margin="0,15" Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Q.  오류1?" HorizontalAlignment="Center" Margin="0,15"/>
+                            <TextBlock Text="A.  오류1 해결방법" HorizontalAlignment="Center" Margin="0,15" Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Row="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Q.  핸드폰버전 어떻게 깔아요?" HorizontalAlignment="Center" Margin="0,15"/>
+                            <TextBlock Text="A.  playstore에 sol beacon service를 검색해주세요." HorizontalAlignment="Center" Margin="0,15" Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Row="4">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Q.  오류2가 났어요." HorizontalAlignment="Center" Margin="0,15"/>
+                            <TextBlock Text="A.  오류2 해결방법" HorizontalAlignment="Center" Margin="0,15" Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </DockPanel>
+
+    </Grid>
+</Window>

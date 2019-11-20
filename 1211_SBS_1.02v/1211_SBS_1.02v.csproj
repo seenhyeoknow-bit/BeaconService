@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{467DCE8D-FB76-49C8-9664-0F36978B337F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_1211_SBS_1._02v</RootNamespace>
+    <AssemblyName>1211_SBS_1.02v</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Beaconinfo.cs" />
+    <Compile Include="data.cs" />
+    <Compile Include="FAQ.xaml.cs">
+      <DependentUpon>FAQ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FindID.xaml.cs">
+      <DependentUpon>FindID.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FindPassword.xaml.cs">
+      <DependentUpon>FindPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InsertBeacon.xaml.cs">
+      <DependentUpon>InsertBeacon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewPassword.xaml.cs">
+      <DependentUpon>NewPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerList.cs" />
+    <Compile Include="ScannerRename.xaml.cs">
+      <DependentUpon>ScannerRename.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WBServer.cs" />
+    <Compile Include="variable.xaml.cs">
+      <DependentUpon>variable.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FAQ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FindID.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FindPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InsertBeacon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BeaconList.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_beaconlistControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_beaconMapControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_mainControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_scannerlistControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScannerRename.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="variable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="page_beaconlistControl.xaml.cs">
+      <DependentUpon>page_beaconlistControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_beaconMapControl.xaml.cs">
+      <DependentUpon>page_beaconMapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_mainControl.xaml.cs">
+      <DependentUpon>page_mainControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_scannerlistControl.xaml.cs">
+      <DependentUpon>page_scannerlistControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\일러스트2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\일러스트3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\일러스트4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\제목 없음.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20181206_222124769.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolBeaconServiceUI_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\인증.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changepw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findpw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notnowpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nowpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_03.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_07.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_12_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_14_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_16_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_19_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_21_no_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로고 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로고 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75%25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\현재 목표물.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\비콘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스캐너.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\위치표시.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\왼쪽.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\비콘 추가.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\새로 고침.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\설정.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\오른쪽.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\완료.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로딩 중.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\최소.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\닫기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메뉴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\작게.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\최대화.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\프로필 추가.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\강아지 프로필.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\고래  프로필.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\고양이 프로필.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로그인.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\최소_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\닫기_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메뉴_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_04_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_03_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_12_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_21_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_19_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_16_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_14_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\여진2_30_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findid_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findpw_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\설정_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %281%29_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %282%29_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %283%29_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %284%29_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %285%29_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스캐너_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addscanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addscanner_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %281%29_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %282%29_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %283%29_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %284%29_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\사물 %285%29_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\비콘 추가_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\새로 고침_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\프로필.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20190131_151104439.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20190131_151103844.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changepw_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\인증_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\오른쪽_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\왼쪽_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\빨간테두리.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\아래.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\아래＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\위.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\위＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이름변경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이름변경＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이름변경가로.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이름변경가로＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\저장.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\저장＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\초기화.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\초기화＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스캐너설정.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스캐너설정＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\비콘삭제.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\비콘삭제＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이미지선택.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\이미지선택＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\취소.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\취소＿ｏｎ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\고양이 프로필＿ｏｎ２.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\강아지 프로필＿ｏｎ２.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\고래  프로필＿ｏｎ２.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘버튼아닌버전.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘버튼아닌버전_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘버튼아닌버전_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검색아이콘버튼아닌버전_4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

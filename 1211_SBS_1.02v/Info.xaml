@@ -1,0 +1,39 @@
+﻿<Window x:Class="_1211_SBS_1._02v.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Info" Height="200" Width="400" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" FontSize="30" FontWeight="Black"><Run Language="ko-kr" Text="Info"/></TextBlock>
+                    <Image Name="minibtn" MouseDown="minibtn_Click"  MouseEnter="minibtn_MouseEnter" MouseLeave="minibtn_MouseLeave" Margin="5" Grid.Column="2" />
+                    <Image Name="closebtn" MouseDown="closebtn_Click" MouseEnter="closebtn_MouseEnter" MouseLeave="closebtn_MouseLeave" Margin="5" Grid.Column="3"/>
+                </Grid>
+            </Border>
+            <Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="회사이름 : Sol Beacon Service" Grid.Row="1" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Tel : 010 - 5670 - 9078" Grid.Row="2" HorizontalAlignment="Center"/>
+                    <TextBlock Text="E-mail : SBS28bit@wsu.ac.kr" Grid.Row="3" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Version : 1.03" Grid.Row="4" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </DockPanel>
+
+    </Grid>
+</Window>

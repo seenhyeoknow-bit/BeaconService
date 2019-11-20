@@ -1,0 +1,98 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_1211_SBS_1._02v" x:Class="_1211_SBS_1._02v.MainWindow"
+        Title="Sol Beacon Services" Height="800" Width="1394" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="menuchangebtn" MouseDown="menuchangebtn_MouseDown" MouseEnter="btn_MouseEnter" MouseLeave="btn_MouseLeave" Margin="5" Grid.Column="0"/>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" Text="Desktop - Sol Beacon Services" FontSize="30" FontWeight="Black"/>
+                    <Image Name="minibtn" MouseDown="minibtn_Click" Margin="5" MouseEnter="btn_MouseEnter" MouseLeave="btn_MouseLeave" Grid.Column="2"/>
+                    <Image Name="closebtn" MouseDown="closebtn_Click" Margin="5" MouseEnter="btn_MouseEnter" MouseLeave="btn_MouseLeave" Grid.Column="3"/>
+                </Grid>
+            </Border>
+            <Border x:Name="menuborder" Width="200" Background="#FF262626" BorderBrush="Black" DockPanel.Dock="Left">
+                <DockPanel x:Name="menuDock" LastChildFill="True">
+                    <Border  x:Name="bordertitle" Height="180" Background="#FFD2D2D2" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="54*"/>
+                                <ColumnDefinition Width="145*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="menutitleimage" Grid.ColumnSpan="2" Margin="0,0,0.4,-0.4"/>
+                            <TextBlock Text="v.103" HorizontalAlignment="Center" Margin="106.4,150,9.4,9.6" RenderTransformOrigin="4.104,-0.583" Foreground="Black" Grid.Column="1"/>
+                        </Grid>
+                    </Border>
+
+                    <Border x:Name="borderGomain" Height="65" Background="#FF979797" BorderBrush="Black" Margin="0,20" DockPanel.Dock="Top" MouseDown="borderGomain_MouseDown" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="homeicon"/>
+                            <TextBlock Text="홈 화면" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20"  Grid.Column="1" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="borderGoBeaconList" Height="65" Background="#FF979797" BorderBrush="Black" Margin="0,10" DockPanel.Dock="Top" MouseDown="borderGoBeaconList_MouseDown" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="beaconlisticon" Grid.Column="0"/>
+                            <TextBlock Text="비콘 관리" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20"  Grid.Column="1" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="borderGoScanner" Height="65" Background="#FF979797" BorderBrush="Black" Margin="0,20" DockPanel.Dock="Top" MouseDown="borderGoScanner_MouseDown" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="scannerlisticon" Grid.Column="0"/>
+                            <TextBlock Text="스캐너 관리" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20"  Grid.Column="1" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="borderGoBeaconMap" Height="65" Background="#FF979797" BorderBrush="Black" Margin="0,10" DockPanel.Dock="Top" MouseDown="borderGoBeaconMap_MouseDown" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Name="beaconmapicon" Grid.Column="0"/>
+                            <TextBlock Text="지도 보기" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20"  Grid.Column="1" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+
+                    <Border x:Name="helpborder" Height="65" Width="80" Background="#FF979797" BorderBrush="DimGray" BorderThickness="1" Margin="10,30" DockPanel.Dock="Left" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Image Name="helpicon" MouseDown="helpborder_MouseDown"/>
+                    </Border>
+                    <Border x:Name="faqborder" Height="65" Width="80" Background="#FF979797" BorderBrush="DimGray" BorderThickness="1" Margin="0,30" MouseEnter="border_MouseEnter" MouseLeave="border_MouseLeave">
+                        <Image Name="faqicon" MouseDown="faqborder_MouseDown"/>
+                    </Border>
+                </DockPanel>
+            </Border>
+            <Border Background="#FFD0D0D0">
+                <Grid Margin="0,0,0,-0.4" Width="1188" Height="734" VerticalAlignment="Bottom">
+                    <DockPanel LastChildFill="True">
+                        <local:page_beaconlistControl x:Name="beaconlistpage" Background="Aqua"/>
+                    </DockPanel>
+                    <local:page_beaconMapControl x:Name="beaconmappage"/>
+                    <local:page_scannerlistControl x:Name="scannerlistpage"/>
+                    <local:page_mainControl x:Name="mainpage"/>
+                </Grid>
+            </Border>
+
+        </DockPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="_1211_SBS_1._02v.InsertBeacon"
+        xmlns:local="clr-namespace:_1211_SBS_1._02v"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="InsertBeacon" Height="500" Width="500" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid Name="maingrid">
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid Background="Black" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" FontSize="25" FontWeight="Black"><Run Language="ko-kr" Text="Insert Beacon"/></TextBlock>
+                    <Image Name="minibtn" MouseDown="minibtn_Click" Margin="5" Grid.Column="2" MouseEnter="minibtn_MouseEnter" MouseLeave="minibtn_MouseLeave"/>
+                    <Image Name="closebtn" MouseDown="closebtn_Click" Margin="5" Grid.Column="3" MouseEnter="closebtn_MouseEnter" MouseLeave="closebtn_MouseLeave"/>
+                </Grid>
+            </Border>
+            <Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <Grid>
+                            <TextBlock Name="scaningtext" Text="스캔중..." FontSize="24" FontWeight="Bold" Margin="0,60,0,0" HorizontalAlignment="Center"/>
+                            <Image Name="scaningimage" Margin="0,0,0,40" MouseDown="scaningimage_MouseDown"/>
+                        </Grid>
+                    </Border>
+                    <ListView Name="beaconlistLB" ItemsSource="{Binding}" Background="#FFBFBFBF" Grid.Row="1" MouseDoubleClick="beaconlistLB_MouseDoubleClick"  MouseDown="scaningimage_MouseDown">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding}" FontSize="24"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                    </ListView>
+                </Grid>
+            </Border>
+        </DockPanel>
+
+    </Grid>
+</Window>

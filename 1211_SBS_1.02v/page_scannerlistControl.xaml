@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="_1211_SBS_1._02v.page_scannerlistControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1100" >
+    <Grid Background="#FFD0D0D0">
+        <DockPanel Name="menuDock" LastChildFill="True">
+            <Border Width="200" Background="#FF5C5C5C"  BorderBrush="Red" BorderThickness="1" DockPanel.Dock="Right">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.17*"/>
+                        <RowDefinition/>
+                        <RowDefinition  Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Name="nowfloorobjecttext1" Grid.Row="0" Text="[ 1F ]" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                        <TextBlock Name="nowfloorobjecttext2" Grid.Row="1" Text="스캐너 목록"  HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                    </Grid>
+                    <ListView Name="SClistview" ItemsSource="{Binding}"  Margin="0,2.2,0.4,54.6" Grid.RowSpan="2" Grid.Row="1">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <!--BeaconIcon, BeaconName, BeaconDistance, BeaconBattery, preferences-->
+                                <TextBlock>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                   
+                                <TextBlock Text="{Binding Path=ScannerName}" Grid.Column="1" HorizontalAlignment="Center" FontSize="12" Margin="15" FontWeight="Bold"/>
+                            </Grid>
+                        </TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Grid Grid.Row="2" Background="#FF343434">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Name="Searchtb" Grid.Column="0" Margin="14,15,14.8,10.2"  Background="White" BorderBrush="{x:Null}" AllowDrop="True" TextAlignment="Center"  TextOptions.TextFormattingMode="Display" FontSize="15" FontWeight="Bold" RenderTransformOrigin="0.52,-0.3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" TextChanged="Searchtb_TextChanged" KeyDown="Searchtb_KeyDown"/>
+                        <Image Name="Searchbtn" Grid.Column="1" MouseDown="Searchbtn_MouseDown" MouseEnter="Searchbtn_MouseEnter" MouseLeave="Searchbtn_MouseLeave"></Image>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border Height="100" Background="#FF343434"  BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                <Grid Margin="-8.8,1.2,8.4,-1.6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Name="leftarrow" Grid.Column="1" MouseDown="leftarrow_MouseDown" MouseEnter="leftarrow_MouseEnter" MouseLeave="leftarrow_MouseLeave"/>
+                    <TextBlock Name="nowfloortext" Grid.Column="2" Text="[ 1F ]" Margin="0,25,0,0" HorizontalAlignment="Center" FontSize="35" FontWeight="Bold"/>
+                    <Image Name="rightarrow" Grid.Column="3" MouseDown="rightarrow_MouseDown" MouseEnter="rightarrow_MouseEnter" MouseLeave="rightarrow_MouseLeave"/>
+                    <Image Name="researchimage" Grid.Column="4" Width="70" Height="70" MouseDown="researchimage_MouseDown" MouseEnter="researchimage_MouseEnter" MouseLeave="researchimage_MouseLeave"/>
+                    <Image Name="setButton"  Grid.Column="5" Width="70" Height="70" MouseDown="setButton_MouseDown" MouseEnter="setButton_MouseEnter" MouseLeave="setButton_MouseLeave"/>
+                    <Image Name="renamebtn"  Grid.Column="6" Width="70" Height="70" MouseDown="renamebtn_MouseDown" MouseEnter="renamebtn_MouseEnter"  MouseLeave="renamebtn_MouseLeave"/>
+                </Grid>
+            </Border>
+            <Border Background="White"  BorderBrush="Blue" BorderThickness="1">
+                <Grid>
+                    <Canvas x:Name="canvas" MouseDown="canvas_MouseDown">
+
+                    </Canvas>
+                    <!--<Image Name="mapimage"/>-->
+                </Grid>
+            </Border>
+        </DockPanel>
+    </Grid>
+</UserControl>

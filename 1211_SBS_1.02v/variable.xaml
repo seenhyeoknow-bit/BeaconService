@@ -1,0 +1,110 @@
+﻿<Window x:Class="_1211_SBS_1._02v.variable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="Variable" Height="400" Width="542.687" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" FontSize="25" FontWeight="Black" Text="Variable"/>
+                    <Image Name="minibtn" MouseDown="minibtn_Click" Margin="5" Grid.Column="2" MouseEnter="minibtn_MouseEnter" MouseLeave="minibtn_MouseLeave"/>
+                    <Image Name="closebtn" MouseDown="closebtn_Click" Margin="5" Grid.Column="3" MouseEnter="closebtn_MouseEnter" MouseLeave="closebtn_MouseLeave"/>
+                </Grid>
+            </Border>
+            <Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <TextBlock Name="sc1value" Grid.Row="0" Text="스캐너1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+                            <TextBlock Name="sc2value" Grid.Row="1" Text="스캐너2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+                            <TextBlock Name="sc3value" Grid.Row="2" Text="스캐너3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions >
+
+                                    <Image Name="upbtn" Grid.Row="0" MouseDown="upbtn_MouseDown" MouseEnter="upbtn_MouseEnter" MouseLeave="upbtn_MouseLeave"></Image>
+                                    <TextBlock Name="value1" Grid.Row="1" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn" Margin="0,0,0,1" Grid.Row="2" MouseDown="downbtn_MouseDown" MouseEnter="downbtn_MouseEnter" MouseLeave="downbtn_MouseLeave"></Image>
+                                    <Image Name="upbtn2" Margin="0,1,0,0" Grid.Row="3" MouseDown="upbtn2_MouseDown" MouseEnter="upbtn2_MouseEnter" MouseLeave="upbtn2_MouseLeave"></Image>
+                                    <TextBlock Name="value2" Grid.Row="4" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn2" Margin="0,0,0,1" Grid.Row="5" MouseDown="downbtn2_MouseDown" MouseEnter="downbtn2_MouseEnter" MouseLeave="downbtn2_MouseLeave"></Image>
+                                    <Image Name="upbtn3" Margin="0,1,0,0" Grid.Row="6" MouseDown="upbtn3_MouseDown" MouseEnter="upbtn3_MouseEnter" MouseLeave="upbtn3_MouseLeave"></Image>
+                                    <TextBlock Name="value3" Grid.Row="7" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn3" Grid.Row="8" MouseDown="downbtn3_MouseDown" MouseEnter="downbtn3_MouseEnter" MouseLeave="downbtn3_MouseLeave"></Image>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions >
+
+                                    <Image Name="upbtn4" Grid.Row="0" MouseDown="upbtn4_MouseDown" MouseEnter="upbtn4_MouseEnter" MouseLeave="upbtn4_MouseLeave"></Image>
+                                    <TextBlock Name="value4" Grid.Row="1" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn4" Margin="0,0,0,1" Grid.Row="2" MouseDown="downbtn4_MouseDown" MouseEnter="downbtn4_MouseEnter" MouseLeave="downbtn4_MouseLeave"></Image>
+                                    <Image Name="upbtn5" Grid.Row="3" Margin="0,1,0,0" MouseDown="upbtn5_MouseDown" MouseEnter="upbtn5_MouseEnter" MouseLeave="upbtn5_MouseLeave"></Image>
+                                    <TextBlock Name="value5" Grid.Row="4" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn5" Grid.Row="5" Margin="0,0,0,1" MouseDown="downbtn5_MouseDown" MouseEnter="downbtn5_MouseEnter" MouseLeave="downbtn5_MouseLeave"></Image>
+                                    <Image Name="upbtn6" Grid.Row="6" Margin="0,1,0,0" MouseDown="upbtn6_MouseDown" MouseEnter="upbtn6_MouseEnter" MouseLeave="upbtn6_MouseLeave"></Image>
+                                    <TextBlock Name="value6" Grid.Row="7" Text="123" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                    <Image Name="downbtn6" Grid.Row="8"  MouseDown="downbtn6_MouseDown" MouseEnter="downbtn6_MouseEnter" MouseLeave="downbtn6_MouseLeave"></Image>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid  Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Name="resetbtn" Grid.Column="0" Width="150" Margin="10"  MouseDown="resetbtn_MouseDown"  MouseEnter="resetbtn_MouseEnter" MouseLeave="resetbtn_MouseLeave" ></Image>
+                        <Image Name="savebtn" Grid.Column="1" Width="150" Margin="10" MouseDown="savebtn_MouseDown" MouseEnter="savebtn_MouseEnter" MouseLeave="savebtn_MouseLeave" ></Image>
+
+                    </Grid>
+                </Grid>
+            </Border>
+        </DockPanel>
+
+    </Grid>
+</Window>

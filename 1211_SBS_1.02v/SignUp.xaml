@@ -1,0 +1,69 @@
+﻿<Window x:Class="_1211_SBS_1._02v.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SignUp" Height="600" Width="500" WindowStyle="None" AllowsTransparency="True" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border Height="65" Background="#FF171717"  BorderBrush="Black" DockPanel.Dock="Top" MouseDown="TitleBorder_MouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Foreground="White" Grid.Column="1" Margin="10" Text="Sign Up" FontSize="25" FontWeight="Black"/>
+                    <Image Name="minibtn" MouseDown="minibtn_Click" Margin="5" Grid.Column="2" MouseEnter="minibtn_MouseEnter" MouseLeave="minibtn_MouseLeave"/>
+                    <Image Name="closebtn" MouseDown="closebtn_Click" Margin="5" Grid.Column="3" MouseEnter="closebtn_MouseEnter" MouseLeave="closebtn_MouseLeave"/>
+                </Grid>
+            </Border>
+            <!--나중에 아이디 중복확인과 이메일 고르기와 비밀번호 가리기 꼭 하자-->
+            <Border Background="#FFA7A7A7">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Name="titleimage" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <TextBlock Text="아이디" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" FontWeight="Bold"/>
+                    <TextBox Name="idtb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="1"/>
+                    <Image Name="idCheck" Grid.Column="3" Grid.Row="1" MouseDown="idCheck_MouseDown" MouseEnter="idCheck_MouseEnter" MouseLeave="idCheck_MouseLeave"></Image>
+
+                    <TextBlock Text="비밀번호" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" FontWeight="Bold"/>
+                    <PasswordBox Name="pwtb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="2" PasswordChanged="pwtb_PasswordChanged"/>
+
+                    <TextBlock Text="비밀번호 확인" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" FontWeight="Bold"/>
+                    <PasswordBox Name="pwchecktb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="3" PasswordChanged="pwtb_PasswordChanged"/>
+
+                    <Label Name="checkpwlb" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" Margin="50"/>     
+                    
+                    <TextBlock Text="이름" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="4" FontWeight="Bold"/>
+                    <TextBox Name="nametb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="4"/>
+
+                    <TextBlock Text="생년월일" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="5" FontWeight="Bold"/>
+                    <TextBox Name="brithnumtb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="5"/>
+
+                    <TextBlock Text="이메일" FontSize="16" Margin="10,20,10,10" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="6" FontWeight="Bold"/>
+                    <TextBox Name="emailtb" Margin="0,18,18,18" Grid.Column="2" Grid.Row="6"/>
+
+                    <Image Name="signupbtn" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7" HorizontalAlignment="Center" MouseDown="signupbtn_MouseDown" MouseEnter="signupbtn_MouseEnter" MouseLeave="signupbtn_MouseLeave"/>
+
+                </Grid>
+            </Border>
+        </DockPanel>
+
+    </Grid>
+</Window>
