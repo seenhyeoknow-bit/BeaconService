@@ -87,10 +87,9 @@ namespace _1211_SBS_1._02v
             }
         }
  
-        //배터리 용량
-      
+        
 
-     
+        //환경변수
         public string W1 { get; set; }
         public string Y1 { get; set; }
         public string W2 { get; set; }
