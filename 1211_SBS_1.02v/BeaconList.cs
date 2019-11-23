@@ -156,8 +156,8 @@ namespace _1211_SBS_1._02v
             }
             else
             {
-                BitmapSource bicon = null;
-                addbeacon(bicon, bn, rssi, rssi1, rssi2, w1, y1, w2, y2, w3, y3);
+                BitmapSource beacon = null;
+                addbeacon(beacon, bn, rssi, rssi1, rssi2, w1, y1, w2, y2, w3, y3);
             }
 
         }
