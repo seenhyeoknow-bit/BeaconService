@@ -10,3 +10,23 @@
 
 # 시연영상
 [![Video Label](http://img.youtube.com/vi/Cv3wSHKkSrE/0.jpg)](https://youtu.be/Cv3wSHKkSrE)
+
+# 팀프로젝트 역할
+* 책임 : 유승우
+* UI구성 및 디자인: 김대희
+* 서버 구축 및 모바일 기능 구현 : 김한준
+* 데스크탑 클라이언트 기능 구현: 신현호,김대희
+* AR기능 구현 및 데이터베이스 구축: 유승우,김소현
+
+# 사용기술
+* 개발환경 : Arduino IDE, Windows 10, .NET Frame Work 4.5, Android 8.0 Oreo
+* 사용라이브러리 : Google AR Core
+* 개발언어 : C#, Java
+* 개발도구: VisualStudio2017, Unity 2018.2.20f1, MySQL Workbench 8.0 CE, Nodejs, Android Studio,
+	    Arduino Sketch
+
+
+# 연락처
+신현호 : seenhyeoknow@naver.com
+
+
