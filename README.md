@@ -9,4 +9,4 @@
 -이소스는 데스크탑 클라이언트 버전입니다.
 
 # 시연영상
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cv3wSHKkSrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/Cv3wSHKkSrE)
