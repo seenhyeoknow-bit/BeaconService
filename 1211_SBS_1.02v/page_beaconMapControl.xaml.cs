@@ -36,10 +36,10 @@ namespace _1211_SBS_1._02v
             initpage();
             // 윈폼 타이머 사용
 
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(5000);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
+            //timer = new DispatcherTimer();
+            //timer.Interval = TimeSpan.FromMilliseconds(5000);
+            //timer.Tick += new EventHandler(timer_Tick);
+            //timer.Start();
 
             Searchbtn.Source = Imaging.CreateBitmapSourceFromHBitmap(Properties.Resources.검색아이콘버튼아닌버전.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
 
@@ -265,10 +265,14 @@ namespace _1211_SBS_1._02v
         {
 
 
-
-            menuDock.DataContext = null;
-            menuDock.DataContext = beaconlist;
-            beaconlist.AddList();
+            try
+            {
+                menuDock.DataContext = null;
+                menuDock.DataContext = beaconlist;
+                beaconlist.AddList();
+            }
+            catch { }
+           
 
 
         }
