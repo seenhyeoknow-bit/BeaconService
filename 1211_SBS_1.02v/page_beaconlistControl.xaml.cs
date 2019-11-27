@@ -32,10 +32,10 @@ namespace _1211_SBS_1._02v
             Beaconrefreshbtn.Source = Imaging.CreateBitmapSourceFromHBitmap(Properties.Resources.새로_고침.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
 
 
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(5000);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
+            //timer = new DispatcherTimer();
+            //timer.Interval = TimeSpan.FromMilliseconds(5000);
+            //timer.Tick += new EventHandler(timer_Tick);
+            //timer.Start();
 
 
         }
