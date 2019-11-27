@@ -222,41 +222,56 @@ namespace _1211_SBS_1._02v
         }
         public void getBeaconName()
         {
-
-            string url = "http://61.81.98.207:9001/?flag=k";
-            string resultGet = Connect(url);
-
-            if (resultGet == null)
+            try
             {
-                return;
+                string url = "http://61.81.98.207:9001/?flag=k";
+                string resultGet = Connect(url);
+
+                if (resultGet == null)
+                {
+                    return;
+                }
+                string[] token1 = resultGet.Split('[');
+                string[] token2 = token1[1].Split(']');
+                string[] token3 = token2[0].Split(',');
+
+
+
+
+                foreach (string s in token3)
+                {
+                    string[] token4 = s.Split('"');
+
+                    blist.Add(token4[1]);
+                }
             }
-            string[] token1 = resultGet.Split('[');
-            string[] token2 = token1[1].Split(']');
-            string[] token3 = token2[0].Split(',');
-
-
-
-
-            foreach (string s in token3)
+            catch (Exception ex)
             {
-                string[] token4 = s.Split('"');
-
-                blist.Add(token4[1]);
+                //MessageBox.Show("테스트");
             }
+           
 
         }
         public void getBeaconlistName(string name)
         {
-            string url = "http://61.81.98.207:9001/?flag=p&var1=" + name;
-            string resultGet = Connect(url);
-            string[] token1 = resultGet.Split('[');
-            string[] token2 = token1[1].Split(']');
-            string[] token3 = token2[0].Split(',');
-            foreach (string s in token3)
+            try
             {
-                string[] token4 = s.Split('"');
-                myblist.Add(token4[1]);
+                string url = "http://61.81.98.207:9001/?flag=p&var1=" + name;
+                string resultGet = Connect(url);
+                string[] token1 = resultGet.Split('[');
+                string[] token2 = token1[1].Split(']');
+                string[] token3 = token2[0].Split(',');
+                foreach (string s in token3)
+                {
+                    string[] token4 = s.Split('"');
+                    myblist.Add(token4[1]);
+                }
             }
+            catch (Exception ex)
+            {
+                
+            }
+
 
         }
         public void getBeaconlist(string name)
@@ -330,9 +345,14 @@ namespace _1211_SBS_1._02v
         }
         public string getProfileIcon()
         {
-            string url = "http://61.81.98.207:9001/?flag=reprofile&var1=" + nowchangeid;
-            string resultGet = Connect(url);
-            return resultGet;
+            try
+            {
+                string url = "http://61.81.98.207:9001/?flag=reprofile&var1=" + nowchangeid;
+                string resultGet = Connect(url);
+                return resultGet;
+            }
+            catch { return null; }
+           
         }
         public string getIcon(string id, string bname)
         {
@@ -381,16 +401,25 @@ namespace _1211_SBS_1._02v
 
         public void getDistance()
         {
-            //rssi -> 거리값 계산
-            string dis = RssiToDistance(rssilist);
+            try
+            {
+                //rssi -> 거리값 계산
+                string dis = RssiToDistance(rssilist);
 
-            string[] token = dis.Split('#');
-            foreach (string d in token)
+                string[] token = dis.Split('#');
+                foreach (string d in token)
+                {
+
+                    if (d != "")
+                        dislist.Add(double.Parse(d));
+                }
+
+            }
+            catch(Exception ex)
             {
 
-                if (d != "")
-                    dislist.Add(double.Parse(d));
             }
+
 
 
         }
@@ -417,35 +446,45 @@ namespace _1211_SBS_1._02v
 
         public string Connect(string str)
         {
-            StringBuilder getParams = new StringBuilder(); ;
+            try
+            {
+                StringBuilder getParams = new StringBuilder(); ;
 
 
 
 
-            string url = System.Web.HttpUtility.UrlEncode(ErrDesc, System.Text.Encoding.GetEncoding("euc-kr"));
-            //http://61.81.98.207:9001/?flag=a
-            //http://61.81.98.207:9001/?flag=a
-            //http://61.81.98.207:9001/?flag=b&var1=1&var2=2&var3=3&var4=4&var5=5&var6=6
-            //주소부분에 다 넣고 객체 생성
+                string url = System.Web.HttpUtility.UrlEncode(ErrDesc, System.Text.Encoding.GetEncoding("euc-kr"));
+                //http://61.81.98.207:9001/?flag=a
+                //http://61.81.98.207:9001/?flag=a
+                //http://61.81.98.207:9001/?flag=b&var1=1&var2=2&var3=3&var4=4&var5=5&var6=6
+                //주소부분에 다 넣고 객체 생성
 
-            HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create(str /*+ getParams + url*/);
-
-
-            //HttpWebResponse 객체 받아옴
-
-            HttpWebResponse wRes = (HttpWebResponse)myReq.GetResponse();
+                HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create(str /*+ getParams + url*/);
 
 
+                //HttpWebResponse 객체 받아옴
 
-            // Response의 결과를 스트림을 생성합니다.
+                HttpWebResponse wRes = (HttpWebResponse)myReq.GetResponse();
 
-            Stream respGetStream = wRes.GetResponseStream();
 
-            StreamReader readerGet = new StreamReader(respGetStream, Encoding.UTF8);
 
-            string resultGet = readerGet.ReadToEnd();
-            wRes.Close();
-            return resultGet;
+                // Response의 결과를 스트림을 생성합니다.
+
+                Stream respGetStream = wRes.GetResponseStream();
+
+                StreamReader readerGet = new StreamReader(respGetStream, Encoding.UTF8);
+
+                string resultGet = readerGet.ReadToEnd();
+                wRes.Close();
+                return resultGet;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("서버와 연결할수 없습니다");
+                return null;
+                
+            }
+            
         }
         #region 로그인기능
         public bool IdCheck(string name)
@@ -498,18 +537,23 @@ namespace _1211_SBS_1._02v
         }
         public bool Login(string id, string pw)
         {
-            string url = "http://61.81.98.207:9001/?flag=j&var1=" + id + "&var2=" + pw;
-            string resultGet = Connect(url);
-            if (resultGet.Equals("true"))
+            try
             {
-                return true;
+                string url = "http://61.81.98.207:9001/?flag=j&var1=" + id + "&var2=" + pw;
+                string resultGet = Connect(url);
+                if (resultGet.Equals("true"))
+                {
+                    return true;
+                }
+                else if (resultGet.Equals("false"))
+                {
+                    return false;
+                }
+                else
+                    return false;
             }
-            else if (resultGet.Equals("false"))
-            {
-                return false;
-            }
-            else
-                return false;
+            catch { return false; }
+           
         }
         public string FindID(string name, string eamil)
         {
