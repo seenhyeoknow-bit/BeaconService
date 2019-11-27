@@ -44,10 +44,10 @@ namespace _1211_SBS_1._02v
             canvas.Background = ib;
             ib.ImageSource = Imaging.CreateBitmapSourceFromHBitmap(Properties.Resources.KakaoTalk_20181206_222124769.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
 
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(1000);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
+            //timer = new DispatcherTimer();
+            //timer.Interval = TimeSpan.FromMilliseconds(1000);
+            //timer.Tick += new EventHandler(timer_Tick);
+            //timer.Start();
         }
         public void timer_Tick(object sender, EventArgs e)
         {
@@ -279,11 +279,15 @@ namespace _1211_SBS_1._02v
         }
         public void ScannerListfresh()
         {
-
-            canvas.Children.Clear();
-            menuDock.DataContext = null;
-            menuDock.DataContext = scannerlist;
-            scannerlist.AddList();
+            try
+            {
+                canvas.Children.Clear();
+                menuDock.DataContext = null;
+                menuDock.DataContext = scannerlist;
+                scannerlist.AddList();
+            }
+            catch { }
+            
 
 
         }
